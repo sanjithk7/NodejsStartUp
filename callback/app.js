@@ -6,7 +6,20 @@ const port = 3001;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+  var myCallback = function(data) {
+    res.end('Added data: '+data);
+  };
+  
+  var addition = function(callback) {
+      var arr = [1,2,3,4,5];
+      var data = 0;
+      for (var i =0 ; i < arr.length; i++) {
+          data = data + arr[i];
+      }
+    callback(data.toString());
+  };
+
+  addition(myCallback);
 });
 
 server.listen(port, hostname, () => {
