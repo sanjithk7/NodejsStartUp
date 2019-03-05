@@ -6,9 +6,7 @@ const port = 3001;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  var a = [10,20,30,40];
-  var b = [20,10,50,100,10];
-  var c = [...a,...b];
+  var a = [10,20,30,40],  b = [20,10,50,100,10], c = [...a,...b];
   function removeDuplicates(arr) {
       var i = 0, len=arr.length, ansArray=[], finalObj={}; 
       while (i<len) {
