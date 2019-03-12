@@ -5,9 +5,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="../formpos.js"></script>
     </head>
     <div>
-        <form action="/" method="POST">
+        <form action="/" method="POST" id="form">
             <div style="width:20%;margin-left: 35%">
                 <div class="form-group">
                     <label for="email">Email Address:</label>
@@ -21,4 +22,21 @@
             </div>
         </form>
     </div>
+    <script>
+    // $(document).ready(() =>{
+    //     $("#form").submit((e) =>{
+    //         e.preventDefault();
+    //         $.ajax({
+    //             url: '/',
+    //             type: 'post',
+    //             contentType: 'application/json',
+    //             data: JSON.stringify($("#form").serializeArray()),
+    //             success: (response) =>{
+    //                 console.log('successfully got respose');
+    //                 console.log(response);
+    //             }
+    //         })
+    //     });
+    // });
+    </script>
 </html>
